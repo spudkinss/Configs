@@ -1,0 +1,39 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=1000
+setopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/alex/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+# My Edits
+
+# Startup:
+autoload -U colors && colors
+PS1="%{$fg[green]%}%n: %{$fg[blue]%}%~ %{$reset_color%}→ "
+
+
+#Alias:
+alias myip="curl http://ipecho.net/plain; echo"
+alias vim="nvim"
+alias pipes="./home/alex/Downloads/pipes.sh"
+#fastfetches:
+alias fetch1="fastfetch -c examples/7"
+alias fetch2="fastfetch -c examples/12"
+alias ffetch="fastfetch -c examples/7"
+alias info="fastfetch -c examples/12"
+alias ff="fastfetch"
+alias smallfetch="fastfetch -c examples/13"
+
+
+#End My Edits
+
+eval $(thefuck --alias)
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
